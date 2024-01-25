@@ -1,0 +1,14 @@
+body {
+    text-align: center;
+    background-color: rgb(75, 220, 220);
+}
+
+#words {
+    font-size: larger;
+    font-weight: 400;
+    color: rgb(14, 9, 157);
+}
+
+img:hover {
+    transform: scale(1.5);
+}

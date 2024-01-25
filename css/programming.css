@@ -1,0 +1,22 @@
+body {
+    text-align: center;
+    background-color: burlywood;
+}
+
+#text {
+    font-size: larger;
+    font-weight: 500;
+}
+
+.top {
+    color: crimson;
+}
+
+img {
+    position: relative;
+    top: 100px;
+}
+
+img:hover {
+    transform: scale(1.5);
+}
