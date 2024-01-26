@@ -3,6 +3,7 @@
 
 <head>
     <title>Portfolio V2</title>
+
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -181,6 +182,64 @@
 
         </main>
         </div>
+
+        <!--JavaScript for the Form section-->
+
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+        <script type="text/javascript">
+            function submitForm() {
+                var name = document.getElementById("name").value;
+                if (!name) {
+                    alert("Please enter your name.");
+                    return false;
+                }
+
+                // Check if the message is entered
+                var message = document.getElementById("message").value;
+                if (!message) {
+                    alert("Please enter a message.");
+                    return false;
+                }
+
+                // Check if the email is a Gmail address
+                var email = document.getElementById("email").value;
+                if (!isGmail(email)) {
+                    alert("Please enter a valid Gmail address.");
+                    return false;
+                }
+
+                // Function to check if the email is a Gmail address
+                function isGmail(email) {
+                    return email.endsWith('@gmail.com');
+                }
+
+
+                (function() {
+                    // Initialize Email.js with your user ID
+                    emailjs.init("FqoF0sUuLlnJgcAAM");
+                })();
+
+                var params = {
+                    from: document.getElementById("name").value,
+                    email: document.getElementById("email").value,
+                    message: document.getElementById("message").value,
+                };
+
+                var serviceID = "service_vp6zhr7";
+                var templateID = "template_629a8kh";
+
+                // Use the promise returned by emailjs.send to handle success or failure
+                return emailjs.send(serviceID, templateID, params)
+                    .then(function(res) {
+                        alert("Email Sent Successfully");
+                        return false; // Form submission will proceed
+                    })
+                    .catch(function(error) {
+                        alert("Error sending email:", error);
+                        return false; // Form submission will be prevented
+                    });
+            }
+        </script>
 </body>
 
 </html>
