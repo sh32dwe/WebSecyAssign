@@ -13,7 +13,7 @@ h1 {
 }
 
 .quotes {
-    background-image: url("/images/play.jpg");
+    background-image: url("images/play.jpg");
     color: aliceblue;
 }
 
@@ -22,21 +22,21 @@ h1 {
 }
 
 .cricket {
-    background-image: url("/images/cricket.jpg");
+    background-image: url("images/cricket.jpg");
     color: rgb(4, 249, 78);
 }
 
 .badminton {
-    background-image: url("/images/badminton.jpg");
+    background-image: url("images/badminton.jpg");
     color: rgb(228, 0, 8);
 }
 
 .football {
-    background-image: url("/images/football.jpg");
+    background-image: url("images/football.jpg");
     color: gold;
 }
 
 .basketball {
-    background-image: url("/images/basketball.jpg");
+    background-image: url("images/basketball.jpg");
     color: rgb(148, 12, 12);
 }
