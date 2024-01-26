@@ -1,15 +1,4 @@
-/*
-Theme Name: Portfolio V2
-Theme URI: https://templatesjungle.com/
-Author: TemplatesJungle
-Author URI: https://templatesjungle.com/
-Description: Portfolio V2 is specially designed product packaged for creative portfolio websites.
-Version: 1.1
-*/
-
-
-/*--------------------------------------------------------------
-/** 1. Base Styles
+/* 1. Base Styles
 --------------------------------------------------------------*/
 
 *,
@@ -696,6 +685,38 @@ span.colored {
 }
 
 
+/* Apply styles for screens with a maximum width of 767px (typical for mobile devices) */
+
+@media only screen and (max-width: 767px) {
+    /* Adjust the font size and spacing for better readability on small screens */
+    body {
+        font-size: 16px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    p {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+    /* Adjust the layout of the skill chart for better display on small screens */
+    .skill-chart {
+        margin-top: 20px;
+    }
+    .skill-chart-list li {
+        width: 100%;
+    }
+    /* Adjust the layout of the service-slider columns for better display on small screens */
+    .column {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* Additional styles or adjustments can be made based on your design and preferences */
+
+
 /*----- Social Links
 -------------------------------*/
 
@@ -838,6 +859,21 @@ span.colored {
 @media screen and (max-width: 999px) {
     #hobbies .section-header p {
         width: 60%;
+    }
+    #hobbies .column {
+        width: 100%;
+        margin-right: 0;
+        margin: 0 auto 30px;
+        padding: 40px 20px;
+    }
+    #hobbies .column h3 {
+        font-size: 2em;
+    }
+    #hobbies {
+        padding: 80px 0;
+    }
+    #hobbies .column:hover {
+        box-shadow: 0px 2px 20px rgb(187 187 187 / 25%);
     }
 }
 
